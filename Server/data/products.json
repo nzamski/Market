@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "קורנפלקס",
+        "price": 10,
+        "inStockQuantity": 15
+    },
+    {
+        "id": 2,
+        "name": "שוקולד",
+        "price": 3,
+        "inStockQuantity": 2
+    },
+    {
+        "id": 3,
+        "name": "לחם לבן",
+        "price": 6,
+        "inStockQuantity": 0
+    },
+    {
+        "id": 4,
+        "name": "תפוח אדום",
+        "price": 1,
+        "inStockQuantity": 32
+    },
+    {
+        "id": 5,
+        "name": "ענבים",
+        "price": 4,
+        "inStockQuantity": 27
+    },
+    {
+        "id": 6,
+        "name": "גבינה צהובה",
+        "price": 5,
+        "inStockQuantity": 25
+    },
+    {
+        "id": 7,
+        "name": "רוטב לשקשוקה",
+        "price": 12,
+        "inStockQuantity": 15
+    },
+    {
+        "id": 8,
+        "name": "חומוס אחלה",
+        "price": 7,
+        "inStockQuantity": 44
+    }
+]
