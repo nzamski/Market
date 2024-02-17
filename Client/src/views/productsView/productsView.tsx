@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
-import { Product } from "../../components/Product";
-import { useGetAllProducts } from "../../services/productsService";
+import { Product } from "src/components/Product";
+import { useGetAllProducts } from "src/services/productsService";
 
 export const ProductsView = () => {
   const { data: products, isPending } = useGetAllProducts();

@@ -1,8 +1,8 @@
 import "./App.css";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ProductsView } from "./views/productsView/productsView";
 import { ThemeProvider, createTheme } from "@mui/material";
-import { ShoppingCartContext } from "context/shoppingCartContext";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ProductsView } from "src/views/productsView/productsView";
+import { ShoppingCartContext } from "src/context/shoppingCartContext";
 
 const App = () => {
   const theme = createTheme({

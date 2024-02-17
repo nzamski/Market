@@ -7,10 +7,11 @@ import {
   Typography,
 } from "@mui/material";
 import { ProductProps } from "./types";
-import { FC, useState } from "react";
+import { FC, useContext, useState } from "react";
 import { AddShoppingCart } from "@mui/icons-material";
 import { useTheme } from "@emotion/react";
 import { getClasses } from "./styles";
+import { ShoppingCartContext } from "src/context/shoppingCartContext";
 
 export const Product: FC<ProductProps> = ({
   id,
@@ -20,15 +21,24 @@ export const Product: FC<ProductProps> = ({
 }) => {
   const theme = useTheme();
   const classes = getClasses(theme);
+  const shoppingCart = useContext(ShoppingCartContext);
 
+  const LOW_AMOUNT = 10;
   const [amount, setAmount] = useState(1);
-  const addToShoppingCart = () => console.log(id);
-  const isAmountLow = inStockQuantity < 10;
+
+  const addToShoppingCart = () => {
+    // inStockQuantity -= amount;
+
+    shoppingCart.push<any>({
+      product: { id, name, price },
+      amount,
+    });
+  };
 
   return (
     <Card
       className={classes.productCard}
-      sx={{ backgroundColor: isAmountLow ? "#C68484" : "" }}
+      sx={{ backgroundColor: inStockQuantity < LOW_AMOUNT ? "#C68484" : "" }}
     >
       <CardContent>
         <Typography gutterBottom variant="h5">
